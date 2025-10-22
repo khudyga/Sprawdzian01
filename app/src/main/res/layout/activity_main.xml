@@ -60,166 +60,186 @@
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:orientation="vertical">
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:orientation="horizontal">
-            <CheckBox
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:id="@+id/tekst"
-                android:text="@string/grupa"
-                android:textSize="30sp"
-                android:textColor="@color/black"
-                />
-            <Space
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"/>
+            android:layout_height="50dp">
+          <LinearLayout
+              android:layout_width="wrap_content"
+              android:layout_height="match_parent"
+              android:orientation="horizontal">
+              <CheckBox
+                  android:layout_width="wrap_content"
+                  android:layout_height="match_parent"
+                  android:id="@+id/checkbox"
+                  android:layout_alignParentStart="true"
+                  />
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="match_parent"
+                  android:id="@+id/tekst"
+                  android:text="@string/grupa"
+                  android:textSize="30sp"
+                  android:textColor="@color/black"
+                  />
+          </LinearLayout>
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:hint="@string/imie_nazwisko"
-                android:textColorHint="@color/black"/>
+                android:textColorHint="@color/black"
+                android:layout_alignParentRight="true"
+                />
 
-        </LinearLayout>
-        <LinearLayout
+        </RelativeLayout>
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:orientation="horizontal">
-            <CheckBox
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"/>
-            <TextView
+            android:layout_height="50dp">
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="@string/_1"
-                android:textSize="30sp"
-                android:textColor="@color/black"
-                />
-            <Space
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"/>
+                android:orientation="horizontal">
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/checkbox2"
+                    android:layout_alignParentStart="true"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/tekst2"
+                    android:text="@string/_1"
+                    android:textSize="30sp"
+                    android:textColor="@color/black"
+                    />
+            </LinearLayout>
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:hint="@string/klasa"
-                android:textColorHint="@color/black"/>
+                android:textColorHint="@color/black"
+                android:layout_alignParentRight="true"
+                />
 
-        </LinearLayout>
+        </RelativeLayout>
     </LinearLayout>
 
-    <LinearLayout
+    <GridLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:orientation="horizontal"
-        android:background="@color/green">
+        android:layout_height="70dp"
+        android:background="@color/green"
+        android:columnCount="5">
+        <View
+                    android:layout_width="50dp"
+                    android:layout_height="30dp"
+                    android:background="@color/black"
+                    android:layout_margin="15dp"
+                    android:layout_gravity="center"
+                    />
         <View
             android:layout_width="50dp"
             android:layout_height="30dp"
             android:background="@color/black"
-            android:layout_margin="10dp"
-            android:layout_weight="1"
-            />
-        <View
-            android:layout_width="50dp"
-            android:layout_height="30dp"
-            android:background="@color/black"
-            android:layout_margin="10dp"
-            android:layout_weight="1"
-            />
-        <View
-            android:layout_width="50dp"
-            android:layout_height="30dp"
-            android:background="@color/black"
-            android:layout_margin="10dp"
-            android:layout_weight="1"
-            />
-        <View
-            android:layout_width="50dp"
-            android:layout_height="30dp"
-            android:background="@color/black"
-            android:layout_margin="10dp"
-            android:layout_weight="1"
-            />
-        <View
-            android:layout_width="50dp"
-            android:layout_height="30dp"
-            android:background="@color/black"
-            android:layout_margin="10dp"
-            android:layout_weight="1"
-            />
-    </LinearLayout>
+            android:layout_margin="15dp"
+            android:layout_gravity="center"
+            /> <View
+        android:layout_width="50dp"
+        android:layout_height="30dp"
+        android:background="@color/black"
+        android:layout_margin="15dp"
+        android:layout_gravity="center"
+        /> <View
+        android:layout_width="50dp"
+        android:layout_height="30dp"
+        android:background="@color/black"
+        android:layout_margin="15dp"
+        android:layout_gravity="center"
+        /> <View
+        android:layout_width="50dp"
+        android:layout_height="30dp"
+        android:background="@color/black"
+        android:layout_margin="15dp"
+        android:layout_gravity="center"
+        />
+
+
+    </GridLayout>
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="50dp"-->
+<!--        android:orientation="horizontal"-->
+<!--        android:background="@color/green">-->
+<!--        <View-->
+<!--            android:layout_width="50dp"-->
+<!--            android:layout_height="30dp"-->
+<!--            android:background="@color/black"-->
+<!--            android:layout_margin="10dp"-->
+<!--            android:layout_weight="1"-->
+<!--            />-->
+<!--        <View-->
+<!--            android:layout_width="50dp"-->
+<!--            android:layout_height="30dp"-->
+<!--            android:background="@color/black"-->
+<!--            android:layout_margin="10dp"-->
+<!--            android:layout_weight="1"-->
+<!--            />-->
+<!--        <View-->
+<!--            android:layout_width="50dp"-->
+<!--            android:layout_height="30dp"-->
+<!--            android:background="@color/black"-->
+<!--            android:layout_margin="10dp"-->
+<!--            android:layout_weight="1"-->
+<!--            />-->
+<!--        <View-->
+<!--            android:layout_width="50dp"-->
+<!--            android:layout_height="30dp"-->
+<!--            android:background="@color/black"-->
+<!--            android:layout_margin="10dp"-->
+<!--            android:layout_weight="1"-->
+<!--            />-->
+<!--        <View-->
+<!--            android:layout_width="50dp"-->
+<!--            android:layout_height="30dp"-->
+<!--            android:background="@color/black"-->
+<!--            android:layout_margin="10dp"-->
+<!--            android:layout_weight="1"-->
+<!--            />-->
+<!--    </LinearLayout>-->
     <View
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:background="@color/lightGreen"/>
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        android:orientation="horizontal"
-        >
-        <View
-            android:layout_width="150dp"
-            android:layout_height="match_parent"
-            android:background="@color/red"
-    />
-        <View
-            android:layout_width="130dp"
-            android:layout_height="match_parent"
-            android:background="@color/pink"/>
-        <View
-            android:layout_width="60dp"
-            android:layout_height="match_parent"
-            android:background="@color/blue"
-         />
-        <View
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:background="@color/lightGreen"
-       />
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="80dp"
-        android:orientation="horizontal"
-        >
-
-        <View
-            android:layout_width="280dp"
-            android:layout_height="match_parent"
-            android:background="@color/pink"/>
-        <View
-            android:layout_width="60dp"
-            android:layout_height="match_parent"
-            android:background="@color/blue"
-            />
-        <View
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:background="@color/yellow"
-            />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="horizontal"
-        >
-
-        <View
-            android:layout_width="340dp"
+        android:orientation="horizontal">
+        <FrameLayout
+            android:layout_width="350dp"
             android:layout_height="match_parent"
             android:background="@color/blue"
-            />
-        <View
-            android:layout_width="wrap_content"
+            >
+            <View
+                android:layout_width="300dp"
+                android:layout_height="150dp"
+                android:background="@color/pink"/>
+            <View
+                android:layout_width="170dp"
+                android:layout_height="70dp"
+                android:background="@color/red"/>
+        </FrameLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/yellow"
-            />
+            android:background="@color/yellow">
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/lightGreen"
+                android:layout_alignParentStart="true"
+                />
+        </RelativeLayout>
     </LinearLayout>
+
+
 </LinearLayout>
